@@ -20,7 +20,7 @@ repository = "https://github.com/napi-rs/escape-simd"
 homepage = "https://github.com/napi-rs/escape-simd"
 
 [workspace.dependencies]
-escape-simd = { version = "0.1.0", path = "crates/escape-simd" }
+escape-simd = { version = "0.1.1", path = "crates/escape-simd" }
 criterion2 = "3"
 glob = "0.3"
 rand = "0.10"

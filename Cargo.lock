@@ -239,7 +239,7 @@ checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
 
 [[package]]
 name = "escape-simd"
-version = "0.1.0"
+version = "0.1.1"
 
 [[package]]
 name = "faststr"
@@ -343,7 +343,7 @@ checksum = "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a"
 
 [[package]]
 name = "html-escape-simd"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "criterion2",
  "escape-simd",
@@ -390,7 +390,7 @@ dependencies = [
 
 [[package]]
 name = "json-escape-simd"
-version = "3.1.2"
+version = "3.1.3"
 dependencies = [
  "criterion2",
  "escape-simd",
