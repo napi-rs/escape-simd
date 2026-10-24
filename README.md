@@ -16,6 +16,16 @@ The published **crate name** `json-escape-simd` is unchanged. This repository is
 
 JSON implementation is from [sonic-rs](https://github.com/cloudwego/sonic-rs); we only take the string escaping part to avoid the abstraction overhead. HTML uses the same kernels with a nibble-lookup classifier.
 
+## License
+
+Original project contributions are covered by the [MIT license](LICENSE).
+The shared kernels include modified code from sonic-rs and sonic-simd under
+[Apache-2.0](LICENSE-APACHE). Both licenses apply to the combined
+`escape-simd` crate (`MIT AND Apache-2.0`); the facade source is MIT-licensed.
+See [NOTICE](NOTICE) for immutable upstream references, affected files,
+modifications, and the notices for the earlier `json-escape-simd 3.0.2` release.
+The generic benchmark has separate [third-party MIT notices](crates/json-escape-simd/benches/generic/LICENSE).
+
 ## JSON (`json-escape-simd`)
 
 ## Benchmarks

@@ -1,3 +1,9 @@
+// Portions derived from sonic-rs (src/util/string.rs), Apache-2.0.
+// Upstream commit: 41ae6e8a5962da26eab34432d1412f35ea6d199e.
+// Modified by escape-simd contributors for
+// shared JSON/HTML escape tables and explicit unsafe blocks.
+// See NOTICE for source links and LICENSE-APACHE for the upstream license.
+
 #[cfg(feature = "html")]
 use crate::{HTML_ESCAPE_TAB, HTML_NEED_ESCAPED};
 #[cfg(feature = "json")]

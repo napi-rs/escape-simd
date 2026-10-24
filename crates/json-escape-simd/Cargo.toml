@@ -6,7 +6,7 @@ rust-version.workspace = true
 license.workspace = true
 repository.workspace = true
 homepage.workspace = true
-include = ["src/**/*.rs"]
+include = ["src/**/*.rs", "LICENSE", "LICENSE-APACHE", "NOTICE"]
 description = "Optimized SIMD routines for escaping JSON strings."
 readme = "README.md"
 

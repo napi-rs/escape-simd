@@ -1,3 +1,6 @@
+// Modified from oxc-sourcemap and serde_json; see the adjacent LICENSE for
+// immutable source references and their MIT copyright/permission notices.
+
 #[inline]
 pub fn escape_generic<S: AsRef<str>>(s: S) -> String {
     let s = s.as_ref();
