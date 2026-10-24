@@ -3,7 +3,10 @@
 //! Enable `json` and/or `html`. Prefer the `json-escape-simd` and
 //! `html-escape-simd` facades unless you need both in one crate.
 //!
-//! JSON kernel borrowed from <https://github.com/cloudwego/sonic-rs/blob/v0.5.5/src/util/string.rs>.
+//! JSON tables and kernels derived from sonic-rs under Apache-2.0:
+//! <https://github.com/cloudwego/sonic-rs/blob/41ae6e8a5962da26eab34432d1412f35ea6d199e/src/util/string.rs>.
+//! Modified by escape-simd contributors for runtime SIMD dispatch, optimized
+//! kernels, and shared JSON/HTML escaping. See NOTICE and LICENSE-APACHE.
 
 #![allow(clippy::incompatible_msrv)]
 

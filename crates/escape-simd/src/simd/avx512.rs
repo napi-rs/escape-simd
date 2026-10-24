@@ -1,3 +1,9 @@
+// Portions derived from sonic-rs (src/util/string.rs and the sonic-simd SIMD interface), Apache-2.0.
+// Upstream commit: 41ae6e8a5962da26eab34432d1412f35ea6d199e.
+// Modified by escape-simd contributors for
+// AVX-512 kernels and JSON/HTML support.
+// See NOTICE for source links and LICENSE-APACHE for the upstream license.
+
 #[cfg(target_arch = "x86")]
 use std::arch::x86::*;
 #[cfg(target_arch = "x86_64")]

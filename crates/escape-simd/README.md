@@ -14,3 +14,10 @@ escape-simd = { version = "0.1", features = ["html"] }
 - `html` — `escape_simd::html::{escape_html, escape_html_into, InputTooLarge}`
 - `avx512` — enable the AVX-512 kernel (runtime-detected)
 - `asan` — force the bounded tail-copy path for sanitizers
+
+## License
+
+See [LICENSE](LICENSE), [LICENSE-APACHE](LICENSE-APACHE), and [NOTICE](NOTICE).
+Original project contributions are MIT-licensed. The shared `escape-simd`
+kernels also contain Apache-2.0 code derived from sonic-rs and sonic-simd;
+both licenses apply to those combined kernels. The facade source is MIT-licensed.

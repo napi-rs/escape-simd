@@ -1,3 +1,9 @@
+// Portions derived from sonic-rs (sonic-simd/src/v128.rs and src/util/string.rs), Apache-2.0.
+// Upstream commit: 41ae6e8a5962da26eab34432d1412f35ea6d199e.
+// Modified by escape-simd contributors for
+// scalar escaping, corrected bitmasks, and JSON/HTML support.
+// See NOTICE for source links and LICENSE-APACHE for the upstream license.
+
 use std::ops::{BitAnd, BitOr, BitOrAssign};
 
 #[cfg(feature = "html")]

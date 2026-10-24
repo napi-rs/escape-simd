@@ -1,0 +1,62 @@
+escape-simd licensing and attribution
+====================================
+
+Original contributions to this project are licensed under the MIT license in
+LICENSE. Portions derived from sonic-rs and sonic-simd remain licensed under
+Apache-2.0, reproduced in LICENSE-APACHE. The MIT license does not replace the
+Apache-2.0 terms for those portions. The escape-simd package therefore declares
+"MIT AND Apache-2.0", not a choice between the two licenses.
+
+The json-escape-simd and html-escape-simd facade source files are MIT-licensed.
+Their escape-simd dependency contains the Apache-2.0 portions described below;
+the license texts and this notice accompany all three packages.
+
+sonic-rs and sonic-simd
+----------------------
+
+Upstream: https://github.com/cloudwego/sonic-rs
+Reference: v0.5.5, resolving to commit
+41ae6e8a5962da26eab34432d1412f35ea6d199e
+Upstream package authors: Volo Team <volo@cloudwego.io>
+
+Immutable source and license references:
+https://github.com/cloudwego/sonic-rs/blob/41ae6e8a5962da26eab34432d1412f35ea6d199e/src/util/string.rs
+https://github.com/cloudwego/sonic-rs/tree/41ae6e8a5962da26eab34432d1412f35ea6d199e/sonic-simd/src
+https://github.com/cloudwego/sonic-rs/blob/41ae6e8a5962da26eab34432d1412f35ea6d199e/LICENSE
+https://github.com/cloudwego/sonic-rs/blob/41ae6e8a5962da26eab34432d1412f35ea6d199e/sonic-simd/LICENSE
+
+The upstream tree at this commit has no NOTICE file. This is an attribution
+and modification notice added by escape-simd, not an upstream NOTICE file.
+The cited source files have no individual copyright notices; no upstream
+copyright owner or year is inferred here.
+
+In the escape-simd crate (crates/escape-simd in the repository):
+- src/lib.rs contains the JSON escape tables from src/util/string.rs.
+- src/simd/util.rs adapts escape_unchecked and check_cross_page from that file.
+- The format_string kernels in src/simd/{avx2,avx512,neon,sse2,v128}.rs adapt
+  its string-escaping algorithm.
+- src/simd/{bits,traits,avx2,neon,sse2,v128}.rs adapt the corresponding
+  sonic-simd modules; src/simd/mod.rs adapts sonic-simd/src/lib.rs.
+  The ARM bitmask references in bits.rs and neon.rs are retained in the source.
+
+These files were modified by escape-simd contributors: the escaping routines
+were extracted from the JSON parser, SIMD selection was changed to runtime
+dispatch, the SIMD interface was reduced, and architecture-specific kernels
+were split and optimized (including AVX-512). Buffer handling and explicit
+unsafe blocks were adapted, endian handling was corrected, and shared kernels
+were extended with feature-gated HTML escaping. File headers identify the
+relevant source and changes. These are modified derivatives, not unmodified
+copies of the upstream files.
+
+json-escape-simd 3.0.2
+---------------------
+
+The same upstream attribution applies to the borrowed portions in src/lib.rs
+and src/simd/*.rs of json-escape-simd 3.0.2, before the workspace split:
+https://github.com/napi-rs/escape-simd/tree/a7eb4e70c5dc007ec618c53914e3301a0c159af7
+
+The original 3.0.2 crate archive has SHA256
+35e770254dd7802184595b1d30da2a15cb72569e2aca2b177aef8d22eac8a693.
+Its manifests declare MIT, but its 15 files omit the license texts and notices.
+These files supply the missing notices; they do not change that already
+published archive or relicense the upstream portions.

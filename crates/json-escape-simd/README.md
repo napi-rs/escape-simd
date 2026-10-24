@@ -18,3 +18,10 @@ use json_escape_simd::{escape, escape_into};
 
 assert_eq!(escape("hello\n"), r#""hello\n""#);
 ```
+
+## License
+
+See [LICENSE](LICENSE), [LICENSE-APACHE](LICENSE-APACHE), and [NOTICE](NOTICE).
+Original project contributions are MIT-licensed. The shared `escape-simd`
+kernels also contain Apache-2.0 code derived from sonic-rs and sonic-simd;
+both licenses apply to those combined kernels. The facade source is MIT-licensed.
